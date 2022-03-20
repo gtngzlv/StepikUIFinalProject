@@ -1,7 +1,6 @@
 from .base_page import BasePage
-import pytest
-import faker
 from .locators import MainPageLocators, LoginPageLocators
+
 
 class LoginPage(BasePage):
     def register_new_user(self, email, password):
@@ -15,11 +14,10 @@ class LoginPage(BasePage):
         self.should_be_register_form()
 
     def should_be_login_url(self):
-        assert "login" in self.browser.current_url, "It is not login url"
+        assert "login" in self.browser.current_url, "Login url is not presented"
 
     def should_be_login_form(self):
-        assert self.is_element_present(*MainPageLocators.LOGIN_FORM), "Login form is not present"
+        assert self.is_element_present(*MainPageLocators.LOGIN_FORM), "Login form is not presented"
 
     def should_be_register_form(self):
-        assert self.is_element_present(*MainPageLocators.REGISTER_FORM), "Register form is not here"
-
+        assert self.is_element_present(*MainPageLocators.REGISTER_FORM), "Register form is not presented"

@@ -10,6 +10,7 @@ class BasketPageLocators:
     CONTENT_MESSAGE = (By.CSS_SELECTOR, ".content p")
     CONTENT_TABLE = (By.CSS_SELECTOR, "#basket_formset")
 
+
 class LoginPageLocators:
     EMAIL_INPUT = (By.NAME, "registration-email")
     PASSWORD_INPUT = (By.NAME, "registration-password1")
